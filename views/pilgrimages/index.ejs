@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+
+<div class = "container">
+<header class = "jumbotron coverimg">
+    <div class = "container">
+        <h1>Welcome to God Is Here!</h1>
+        <p>View pilgrimages around the World!</p>
+        <p>
+            <a class = "btn btn-primary btn-lg" href= "/pilgrimages/new">Share New Pilgrimage</a>
+        </p>
+    </div>
+
+</header>
+
+
+<div class = "row" style = "display: flex; flex-wrap: wrap;">
+<!-- campgrounds is the object (collection of campgrounds retrieved from database) 
+    passed by caller INDEX route in app.js while calling render("campgrounds/index", -->
+<% pilgrimage.forEach(function(pilgrimage){ %>
+    <div class = "col-md-3 col-sm-6">
+        <div class = "thumbnail">
+            <img class = "images" src = "<%= pilgrimage.image %>">
+            <div class = "caption">
+                <h4><%= pilgrimage.name %></h4>
+            </div>
+            <p><a href = "/pilgrimages/<%= pilgrimage._id %>" class = "btn btn-primary">More Info</a>
+            </p>
+        </div>
+    </div>
+
+<% }); %>
+</div>
+</div>
+
+<% include ../partials/footer %>
+
+

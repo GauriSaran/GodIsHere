@@ -1,0 +1,8 @@
+.container .containers {
+    width: 30%;
+    margin-left: 350px;
+}
+
+.coverimg {
+    background: url("../img/mount-kailash-3192640_1920.jpg") no-repeat center center/cover;
+}

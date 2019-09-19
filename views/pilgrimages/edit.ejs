@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style = "text-align: center">Edit</h1>
+        <div style="width: 30%; margin: 0 auto;">
+            <form action="/pilgrimages/<%=pilgrimage._id%>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="pilgrimage[name]" value = <%=pilgrimage.name%> placeholder="c">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="pilgrimage[image]" value = <%= campground.image%> placeholder="image url">
+                </div>
+                <div class = "form-group">
+                    <input class = "form-control" type = "text" value = <%= pilgrimage.description %> name ="campground[description]">
+                </div>
+                <div class="form-group">
+                    <button  class = "btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+                </div>
+            </form>
+            <a href= "/pilgrimages">Go back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
